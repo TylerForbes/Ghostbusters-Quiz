@@ -27,7 +27,8 @@ constructor(props) {
 
 
 
-_submitAnswer(){
+_submitAnswer(e){
+  e.preventDefault();
     this.refs.quizInput.value === question[this.state.question].answer ? correct += 1 : correct;
     this.setState({ question: this.state.question + 1});
     console.log(correct);
