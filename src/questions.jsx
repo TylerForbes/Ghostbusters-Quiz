@@ -8,11 +8,11 @@ import {browserHistory} from 'react-router';
 
 const question = [
     { question: "Alice, I'm going to ask you a couple of standard questions, okay? Have you or any of your family been diagnosed schizophrenic? Mentally incompetent?",
-        answer: "1"},
+        answer: ["yes", "no", "My uncle thought he was Saint Jerome"]},
 
-    { question: "I'd call that a big yes. Uh, are you habitually using drugs? Stimulants? Alcohol?", answer: "2"},
+    { question: "I'd call that a big yes. Uh, are you habitually using drugs? Stimulants? Alcohol?", answer: ["yes", "no", "No"]},
 
-    {  question: "No, no. Just asking. Are you, Alice, menstruating right now?", answer: "3"},
+    {  question: "No, no. Just asking. Are you, Alice, menstruating right now?", answer: ["yes", "no", "Back off, man. I'm a scientist"]},
   ]
   var correct = 0
 
@@ -29,7 +29,9 @@ constructor(props) {
 
 _submitAnswer(e){
   e.preventDefault();
-    this.refs.quizInput.value === question[this.state.question].answer ? correct += 1 : correct;
+    if (question[this.state.question].answer.includes(this.refs.quizInput.value)) {
+      correct += 1;
+    }
     this.setState({ question: this.state.question + 1});
     console.log(correct);
     console.log(question[this.state.question].answer)

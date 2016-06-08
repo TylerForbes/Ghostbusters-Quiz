@@ -29,7 +29,7 @@ _stopTimer() {
         <TimerHidden className="timerhidden"
         started={this.state.started}
         stopTimer={this._stopTimer.bind(this)}
-        secondsRemaining="40"/>
+        secondsRemaining="35"/>
         </div>
     );
 
