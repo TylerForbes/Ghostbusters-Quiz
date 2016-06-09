@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {browserHistory} from 'react-router';
-import TimerHidden from './timerhidden'
+import TimerHidden from './timerhidden';
+import Welcome from './welcome';
 
 export default class Failure extends React.Component {
 
@@ -20,6 +21,10 @@ _stopTimer() {
   this.setState({started: false})
 }
 
+_tryAgain() {
+  browserHistory.push('/welcome')
+}
+
 
   render() {
     if (this.state.started){
@@ -29,12 +34,12 @@ _stopTimer() {
         <TimerHidden className="timerhidden"
         started={this.state.started}
         stopTimer={this._stopTimer.bind(this)}
-        secondsRemaining="35"/>
+        secondsRemaining="33"/>
         </div>
     );
 
 } else return(
-  <h2 class="failureMessage"> Well, we're always looking for new equipment techs..... did you know we walk around with unlicensed Nuclear accelerators strapped to our backs?</h2>
+  <div className="failureMessage"><h2>Sorry, looks like you're not ready to join the Ghostbusters</h2><p> Well, we're always looking for new equipment techs..... did you know we walk around with unlicensed Nuclear accelerators strapped to our backs?</p><p>if you think you're ready to try again</p><button className="bigbutton" onClick={this._tryAgain.bind(this)}>click here</button></div>
 )
 }
 }

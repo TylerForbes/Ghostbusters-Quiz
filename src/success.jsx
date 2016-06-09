@@ -15,7 +15,7 @@ constructor(props) {
 render(){
   return(
     <div className="quiz">
-      <button>
+      <button className="bigButton">
         Success
       </button>
 

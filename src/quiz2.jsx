@@ -40,7 +40,7 @@ _showQuiz() {
 render(){
   return(
     <div className="quiz">
-      { this.state.started ?  this._showQuiz() : <button onClick={this._startTimer.bind(this)}>
+      { this.state.started ?  this._showQuiz() : <button className="bigButton" onClick={this._startTimer.bind(this)}>
         Start Test
       </button>}
 

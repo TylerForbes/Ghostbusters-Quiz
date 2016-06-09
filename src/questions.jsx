@@ -21,7 +21,12 @@ export default class Questions extends React.Component {
 
 constructor(props) {
   super(props);
-  this.state = { question: 0 }
+  this.state = { question: 0 };
+
+  }
+
+  componentDidMount(props) {
+    ReactDOM.findDOMNode(this.refs.quizInput).focus();
   }
 
 
@@ -37,6 +42,7 @@ _submitAnswer(e){
     console.log(correct);
     console.log(question[this.state.question].answer)
     console.log(this.refs.quizInput.value);
+    ReactDOM.findDOMNode(this.refs.quizInput).focus();
     this.refs.quizInput.value = '';
 }
 
@@ -70,7 +76,7 @@ _displaying(){
                 <p className="question">{question[this.state.question].question}</p>
                 <div className="answers">
                 <form className="user-answers" name="quizInput" onSubmit={this._submitted.bind(this)}>
-                  <input type='text' ref="quizInput"/>
+                  <input type='text' ref="quizInput" required/>
                 <button onClick={this._submitAnswer.bind(this)}>submit answer</button></form>
                 </div>
               </div>
