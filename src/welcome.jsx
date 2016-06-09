@@ -24,7 +24,7 @@ _Welcome() {
 render(){
   return(
     <div className="quizWelcome">
-      { this.state.started ? '' : <div className="welcome"><div><h1>Are you afraid of no ghosts?</h1><h2>Do you have what it takes to join the.....</h2></div><div className="bigButton"><button onClick={this._Welcome.bind(this)}>
+      { this.state.started ? '' : <div className="welcome"><div><h1>Are you afraid of no ghosts?</h1><h2>Do you have what it takes to join the.....</h2></div><div><button className="bigButton" onClick={this._Welcome.bind(this)}>
         Let's Find Out!
       </button><h2> We're ready to believe you</h2></div></div>}
 
