@@ -27,6 +27,7 @@ constructor(props) {
 
 
 
+
 _submitAnswer(e){
   e.preventDefault();
     if (question[this.state.question].answer.includes(this.refs.quizInput.value)) {

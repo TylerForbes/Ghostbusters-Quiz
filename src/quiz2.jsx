@@ -1,7 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Timer from './timer';
+import Failure from './failure';
 import Questions from './questions';
+import {browserHistory} from 'react-router';
+
 
 export default class Quiz2 extends React.Component {
 
@@ -18,7 +21,8 @@ _startTimer() {
 }
 
 _stopTimer() {
-  this.setState({started: false})
+  this.setState({started: false});
+  browserHistory.push('/failure');
 }
 
 _showQuiz() {

@@ -10,7 +10,6 @@ import Success from './success';
 import SecretSuccess from './secretSuccess';
 
 
-require ('./styles/reset.scss');
 require ('./styles/main.scss');
 
   class App extends React.Component {
@@ -24,7 +23,6 @@ require ('./styles/main.scss');
     render() {
       return (
         <div className="full">
-          <section className="Sidebar"></section>
           <div className="Quiz-Area Ghostbusters">
             <Router history= {browserHistory}>
             <Redirect from='/' to='/welcome' />

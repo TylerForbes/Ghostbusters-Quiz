@@ -38,6 +38,10 @@ module.exports = {
             {
                 test: /\.jpg$/,
                 loader: 'url'
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file?name=src/styles/assets/fonts/[name].[ext]'
             }
         ]
     },

@@ -34,9 +34,7 @@ _stopTimer() {
     );
 
 } else return(
-  <div className="container">
-    <iframe className="player" width="854" height="480" src="https://www.youtube.com/embed/r1-NvLJFDsw?autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <h2 class="failureMessage"> Well, we're always looking for new equipment techs..... did you know we walk around with unlicensed Nuclear accelerators strapped to our backs?</h2>
 )
 }
 }
