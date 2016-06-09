@@ -28,6 +28,7 @@ button {
   color: black;
   height: 100%;
   width: 100%;
+  text-align: center;
 
 }
 
@@ -73,7 +74,7 @@ form {
 .quiz {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
 
 }
@@ -99,6 +100,8 @@ padding-bottom: 5vh;
   height: 100px;
   width: 250px;
   font-size: 35px;
+  text-align: center;
+  align-self: flex-end;
 }
 .welcome button {
   height: 100px;
@@ -138,7 +141,6 @@ padding-bottom: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
   width: 95%;
   padding-top: 5px
 }
